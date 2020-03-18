@@ -8,7 +8,7 @@ Para instalar basta abrir o arquivo pubspec.yaml e adicionar a seguinte dependê
 
 ```bash
 dependencies:
-  linksaplicativos: ^0.1.0
+  linksaplicativos: ^0.1.2
 ```
 
 # Como Usar
