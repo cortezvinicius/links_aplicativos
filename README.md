@@ -150,4 +150,4 @@ class _HomeState extends State<Home>
 Sugestões e ideias são bem vindas para futuras versões.
 
 ## licença
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/cortezvinicius/links_aplicativos/blob/master/LICENSE)
