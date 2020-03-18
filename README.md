@@ -1,14 +1,109 @@
 # linksaplicativos
 
-A new Flutter plugin.
+linksaplicativos é um plugin que permite você usar serviços de email,whastsapp,apple maps, google maps e chamadas telefônicas
 
-## Getting Started
+## Instalação
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Para instalar basta abrir o arquivo pubspec.yaml e adicionar a seguinte dependência.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```bash
+dependencies:
+  linksaplicativos: ^0.1.0
+```
+
+## Como Usar
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:linksaplicativos/linksaplicativos.dart';
+
+
+void main()=>runApp(Aplicativo());
+
+
+class Aplicativo extends StatelessWidget
+{
+  @override
+  Widget build(BuildContext context)
+  {
+    // TODO: implement build
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatefulWidget
+{
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home>
+{
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Exemplo"),
+      ),
+      body: Center(
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                RaisedButton(
+                  child: Text("Pagina Web", style: TextStyle(color: Colors.white)),
+                  color: Colors.blue,
+                  onPressed: ()
+                  {
+                    Linksaplicativos.paginaWeb("https://www.sitedesejado.com.br");
+                  },
+                ),
+                RaisedButton(
+                  child: Text("Telefone", style: TextStyle(color: Colors.white)),
+                  color: Colors.blue,
+                  onPressed: ()
+                  {
+                    Linksaplicativos.telefone("1223334455");
+                  },
+                ),
+                RaisedButton(
+                  child: Text("Whatsapp", style: TextStyle(color: Colors.white)),
+                  color: Colors.blue,
+                  onPressed: ()
+                  {
+                    Linksaplicativos.whatasapp("00122334455", "Olá Mundo");
+                  },
+                ),
+                RaisedButton(
+                  child: Text("mapa", style: TextStyle(color: Colors.white)),
+                  color: Colors.blue,
+                  onPressed: ()
+                  {
+                    Linksaplicativos.mapa("-8.413441", "-55.600508", "Local Name", "iniciar");
+                  },
+                ),
+                RaisedButton(
+                  child: Text("email", style: TextStyle(color: Colors.white)),
+                  color: Colors.blue,
+                  onPressed: ()
+                  {
+                    Linksaplicativos.email("email@gmail.com", "teste", "Olá Mundo");
+                  },
+                ),
+              ],
+            ),
+          )
+      ),
+    );
+  }
+}
+```
+
+## Contribuições
+Sugestões e ideias são bem vindas para futuras versões
+
+## licença
+[MIT](https://choosealicense.com/licenses/mit/)
