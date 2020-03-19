@@ -13,7 +13,17 @@ dependencies:
 
 # Como Usar
 
+## Configurações Obrigatórias iOS
 
+add em infos.plist
+
+````
+<key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>whatsapp</string>
+            <string>comgooglemaps</string>
+        </array>
+````
 ## Pagina Web
 
 **obs:** pode ser passado protocolo http no lugar de https
